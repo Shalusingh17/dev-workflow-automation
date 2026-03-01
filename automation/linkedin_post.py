@@ -1,16 +1,11 @@
+import webbrowser
+
 def post_to_linkedin():
 
-    message = """
-🚀 New Project Update
+    repo_link = "https://github.com/shalusingh17/dev-workflow-automation"
 
-I just pushed new updates to my GitHub project.
+    linkedin_url = f"https://www.linkedin.com/sharing/share-offsite/?url={repo_link}"
 
-Project: Dev Workflow Automation
+    print("Opening LinkedIn post window...")
 
-This automation automatically syncs VS Code work with GitHub and LinkedIn.
-
-#Python #Automation #GitHub #Developer
-"""
-
-    print("LinkedIn Post Content:")
-    print(message)
+    webbrowser.open(linkedin_url)
