@@ -1,17 +1,16 @@
-
 # Dev Workflow Automation
 
-This project automatically pushes code to GitHub and posts updates to LinkedIn.
-
-## Last Update
-2026-03-01 12:43:23.743630
+This project automates a developer workflow.
 
 ## Features
-- Auto GitHub Push
-- Auto README Update
-- LinkedIn Update Automation
+- Auto GitHub push
+- Auto README update
+- LinkedIn post generation
 
 ## Tech Stack
-Python
-Git
-Automation
+- Python
+- Git
+- Automation
+
+## Author
+Shalu Singh
