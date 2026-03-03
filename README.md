@@ -15,3 +15,4 @@ This project automatically pushes code to GitHub and posts updates to LinkedIn.
 Python
 Git
 Automation
+Minor test update to trigger automation
