@@ -1,11 +1,16 @@
 import webbrowser
+import urllib.parse
 
-def post_to_linkedin():
+def post_to_linkedin(caption, image_path):
 
     repo_link = "https://github.com/shalusingh17/dev-workflow-automation"
 
-    linkedin_url = f"https://www.linkedin.com/sharing/share-offsite/?url={repo_link}"
+    text = caption + "\n\n" + repo_link
 
-    print("Opening LinkedIn post window...")
+    encoded = urllib.parse.quote(text)
+
+    linkedin_url = f"https://www.linkedin.com/feed/?shareActive=true&text={encoded}"
+
+    print("Opening LinkedIn post window")
 
     webbrowser.open(linkedin_url)
