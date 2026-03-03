@@ -1,19 +1,42 @@
-
 # Dev Workflow Automation
 
-This project automatically pushes code to GitHub and posts updates to LinkedIn.
+An intelligent developer workflow automation system that:
 
-## Last Update
-2026-03-01 23:30:10.795117
+- Automatically pushes changes to GitHub
+- Generates a project screenshot
+- Creates a human-like LinkedIn caption
+- Opens LinkedIn ready to post
 
-## Features
-- Auto GitHub Push
-- Auto README Update
-- LinkedIn Update Automation
+---
 
-## Tech Stack
-Python
-Git
-Automation
-Minor test update to trigger automation
-Testing automation
+## 🚀 Features
+
+- Real-time file watcher
+- Auto GitHub push
+- Smart screenshot generation
+- LinkedIn semi-automation posting
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- Git
+- Automation (watchdog, mss, pyperclip)
+
+---
+
+## 📌 Workflow
+
+1. Save a file  
+2. GitHub auto-push triggers  
+3. Screenshot is captured  
+4. Caption is copied  
+5. LinkedIn opens ready to post  
+
+---
+
+## 👩‍💻 Author
+
+Shalu Singh
+Live trigger test
