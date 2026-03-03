@@ -1,13 +1,25 @@
 import webbrowser
-import urllib.parse
+import time
+import pyperclip
+
 
 def post_to_linkedin(caption, image_path):
 
-    text = caption
-    encoded = urllib.parse.quote(text)
+    print("\nPreparing LinkedIn post...\n")
 
-    linkedin_url = f"https://www.linkedin.com/feed/?shareActive=true&text={encoded}"
+    # Copy caption to clipboard automatically
+    pyperclip.copy(caption)
 
-    webbrowser.open(linkedin_url)
+    print("Caption copied to clipboard ✅")
 
-    print("LinkedIn opened. Attach this image manually:", image_path)
+    # Open LinkedIn feed
+    webbrowser.open("https://www.linkedin.com/feed/")
+
+    time.sleep(5)
+
+    print("\n================ ACTION REQUIRED ================\n")
+    print("1️⃣ Click 'Start a post'")
+    print("2️⃣ Press CTRL + V (caption already copied)")
+    print("3️⃣ Attach this image:", image_path)
+    print("4️⃣ Click Post 🚀")
+    print("\n=================================================\n")
