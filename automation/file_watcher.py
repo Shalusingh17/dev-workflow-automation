@@ -10,37 +10,21 @@ from automation.caption import generate_caption
 
 class ChangeHandler(FileSystemEventHandler):
 
-    def on_modified(self, event):
+    ddef on_modified(self, event):
 
-        if event.is_directory:
-            return
+    if event.is_directory:
+        return
 
-        print("File saved — running automation")
+    # Only trigger if README.md changed
+    if "README.md" not in event.src_path:
+        return
 
-        push_to_github()
+    print("README modified. Running automation...")
 
-        screenshot = take_screenshot()
+    push_to_github()
 
-        caption = generate_caption()
+    image_path = take_screenshot()
 
-        post_to_linkedin(caption, screenshot)
+    caption = generate_caption()
 
-
-def start_watching():
-
-    path = "."
-    event_handler = ChangeHandler()
-    observer = Observer()
-
-    observer.schedule(event_handler, path, recursive=True)
-    observer.start()
-
-    print("Watching project for changes...")
-
-    try:
-        while True:
-            time.sleep(5)
-    except KeyboardInterrupt:
-        observer.stop()
-
-    observer.join()
+    post_to_linkedin(caption, image_path)
